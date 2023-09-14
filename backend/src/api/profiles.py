@@ -41,6 +41,12 @@ def del_profile(id_profile: int, profile_list: list):
 
     return profile
 
+def check_profile_plan(max_id: int, plan: int):
+    if max_id == 3 and plan == 0:
+        raise HTTPException(status_code=403, detail='Você atingiu o limite de perfis para seu plano (comum)')
+    elif max_id == 7 and plan == 1:
+        raise HTTPException(status_code=403, detail='Você atingiu o limite de perfis para seu plano (premium)')
+
 # cria um novo profile
 @router.post(
     '/', status_code=201, response_model=ProfileDB, tags=['profiles']
@@ -53,10 +59,7 @@ async def create_profile(
 
     profile_id = database.get_greatest_table_id_from_profile('profiles') + 1 # retorna o maior id de profile
 
-    if max_id == 3 and current_user["plan"] == 0:
-        raise HTTPException(status_code=403, detail='Você atingiu o limite de perfis para seu plano (comum)')
-    elif max_id == 7 and current_user["plan"] == 1:
-        raise HTTPException(status_code=403, detail='Você atingiu o limite de perfis para seu plano (premium)')
+    check_profile_plan(max_id, current_user["plan"]) # checa se o usuário atingiu o limite de profiles
     
     profile_with_id = ProfileDB(**profile.model_dump(), id_profile=max_id+1, id_user=current_user["id"], id=profile_id) # retorna um dicionario com os dados do profile, além do id do usuário e do profile criado
 
