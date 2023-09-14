@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "@mui/icons-material": "^5.14.8",
-    "@mui/material": "^5.14.8"
+    "@mui/material": "^5.14.8",
+    "axios": "^1.5.0"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.5",
     "cucumber-html-reporter": "^7.1.1",
     "cucumber-pretty": "^6.0.1",
     "cypress": "^13.2.0",
