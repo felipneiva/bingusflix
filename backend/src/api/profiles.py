@@ -49,7 +49,7 @@ async def create_profile(
     profile: ProfileModel, current_user: Annotated[UserDB, Depends(get_logged_user)]
 ):  
     
-    max_id = database.get_greatest_table_id_profile(('profiles'), current_user["id"]) # retorna a quantidade de usuarios
+    max_id = database.get_greatest_table_id_profile(('profiles'), current_user["id"]) # retorna a quantidade de profiles
 
     profile_id = database.get_greatest_table_id_from_profile('profiles') + 1 # retorna o maior id de profile
 
