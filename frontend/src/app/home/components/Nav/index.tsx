@@ -101,9 +101,9 @@ function Nav() {
             <span className='close' onClick={closeModal}>
               X
             </span>
-            <button className='profile-button' onClick={handleAccount}>Conta</button>
-            <button className='profile-button' onClick={handleProfiles}>Perfis</button>
-            <button className='profile-button' onClick={handleLogout}>Logout</button>
+            <button className='popup-button' onClick={handleAccount}>Conta</button>
+            <button className='popup-button' onClick={handleProfiles}>Perfis</button>
+            <button className='popup-button' onClick={handleLogout}>Logout</button>
             <button className='popup-button' onClick={handleHistoryClick}>Histórico</button>
           </div>
         </div>

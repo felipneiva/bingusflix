@@ -81,7 +81,7 @@ function Row({ title, path, isLarge, tipo }) {
     return (
         <div className='row-container'>
             <h2 className='row-header'>{title}</h2>
-            <div className='row-cards-container'>
+            <div data-cy='Filmes em alta' className='row-cards-container'>
                 <button className='scroll-button left-button' onClick={scrollLeft}>
                     &lt;
                 </button>
