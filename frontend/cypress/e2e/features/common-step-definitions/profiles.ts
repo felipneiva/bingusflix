@@ -24,3 +24,18 @@ import axios from 'axios';
 // When: login.ts
 
 // Then: login.ts
+
+// Scenario: edição bem sucedida de um profile
+// Given: gender.ts
+
+// Given: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// Then: login.ts
