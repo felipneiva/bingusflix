@@ -5,13 +5,15 @@ const categories = [
         name: "comedy_tv",
         title: "Séries de comédia",
         path: `/discover/tv?api_key=${API_KEY}&with_genres=35&include_adult=false`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'tv'
     },
     {
         name: "comedy_movies",
         title: "Filmes de comédia",
         path: `/discover/movie?api_key=${API_KEY}&with_genres=35&include_adult=false`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'movie'
     }
 ]
 

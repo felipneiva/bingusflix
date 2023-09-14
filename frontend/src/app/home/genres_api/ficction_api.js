@@ -5,13 +5,15 @@ const categories = [
         name: "ficction_tv",
         title: "Séries de ficcção científica",
         path: `/discover/tv?api_key=${API_KEY}&with_genres=10765`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'tv'
     },
     {
         name: "ficction_movies",
         title: "Filmes de ficcção científica",
         path: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'movie'
     }
 ]
 

@@ -5,13 +5,15 @@ const categories = [
         name: "suspense_tv",
         title: "Séries de suspense",
         path: `/discover/tv?api_key=${API_KEY}&with_genres=9648`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'tv'
     },
     {
         name: "suspense_movies",
         title: "Filmes de suspense",
         path: `/discover/movie?api_key=${API_KEY}&with_genres=53`,
-        isLarge: false
+        isLarge: false,
+        tipo: 'movie'
     }
 ]
 
