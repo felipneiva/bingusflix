@@ -22,7 +22,7 @@ function Profiles() {
         const config = {headers: {Authorization: `Bearer ${token}`}};
 
         try {
-            const response = await axios.get('http://localhost:8000/profiles', config);
+            const response = await axios.get('http://127.0.0.1:8000/profiles', config);
             
             setProfileList(response.data.profiles);
         } catch(e) {

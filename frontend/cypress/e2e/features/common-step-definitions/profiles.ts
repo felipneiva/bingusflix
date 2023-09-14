@@ -5,3 +5,22 @@ import axios from 'axios';
 // Given: gender.ts
 
 // Given: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// When: login.ts
+
+// Then: login.ts
+
+// Scenario: remoção bem sucedida de um profile
+// Given: gender.ts
+
+// Given: login.ts
+
+// When: login.ts
+
+// Then: login.ts

@@ -18,11 +18,12 @@ function AddProfile() {
         event.preventDefault();
 
         const token = localStorage.getItem('token');
+        console.log(token)
         const config = {headers: {Authorization: `Bearer ${token}`}};
 
         try {
-    
-            const response = await axios.post(`http://localhost:8000/profiles`, {
+            console.log("entrou no try")
+            const response = await axios.post(`http://127.0.0.1:8000/profiles`, {
                 nickname: nickname,
                 pg: age,
                 language: language
@@ -31,9 +32,10 @@ function AddProfile() {
             console.log(response.status);
             setErrorMessage("");
             setSuccessMessage("Perfil criado com sucesso!");
+            navigate('/home-page');
         } catch (error) {
             console.error(error);
-            setErrorMessage("Não foi possível alterar seu perfil");
+            setErrorMessage("Não foi possível criar seu perfil");
             setSuccessMessage("");
         }
     }
@@ -56,18 +58,21 @@ function AddProfile() {
 
                         <div className={styles.inputBoxes}>
                             <input className={styles.formInputName} type="text"
+                            data-cy="nome"
                             placeholder="Digite o nome do perfil"
                             value = {nickname}
                             onChange = {(e) => setNickname(e.target.value)}
                             required/>
 
                             <input className={styles.formInputAge} type="text" 
+                            data-cy="idade"
                             placeholder="Digite a idade do perfil"
                             value = {age}
                             onChange = {(e) => setAge(e.target.value)}
                             required/>
 
                             <input className={styles.formInputLanguage} type="text" 
+                            data-cy="lingua"
                             placeholder="Digite a lingua do perfil"
                             value = {language}
                             onChange = {(e) => setLanguage(e.target.value)}
@@ -78,6 +83,7 @@ function AddProfile() {
 
                             <button 
                             type="submit" 
+                            data-cy="Criar"
                             className={styles.confirmButton}>
                                 Criar
                             </button>
